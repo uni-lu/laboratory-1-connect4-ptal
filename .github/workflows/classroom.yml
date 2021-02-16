@@ -1,0 +1,13 @@
+name: GitHub Classroom Workflow
+
+on:
+  schedule:
+    - cron: '0 7 1,18,22,26 2,3 *'
+
+jobs:
+  build:
+    name: Autograding
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: education/autograding@v1

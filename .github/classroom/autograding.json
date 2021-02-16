@@ -1,0 +1,234 @@
+{
+  "tests": [
+    {
+      "name": "Test-0 - HelloWorld",
+      "setup": "javac src/lab1/HelloWorld.java",
+      "run": "timeout 10s java -cp src lab1.HelloWorld",
+      "input": "2\n 10\n 12\n",
+      "output": "The average is 11",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-A1 - MessageToTheWorld",
+      "setup": "javac src/lab1/MessageToTheWorld.java",
+      "run": "timeout 10s java -cp src lab1.MessageToTheWorld",
+      "input": "",
+      "output": "My name is",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-A2 - AdvancedGeometry",
+      "setup": "javac src/lab1/AdvancedGeometry.java",
+      "run": "timeout 10s java -cp src lab1.AdvancedGeometry",
+      "input": "2\n3\n",
+      "output": "\n***\n***\n",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-A3 - AdvancedGeometry",
+      "setup": "javac src/lab1/AdvancedGeometry.java",
+      "run": "timeout 10s java -cp src lab1.AdvancedGeometry",
+      "input": "3\n2\n",
+      "output": "\n**\n**\n**\n",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-A4 - AdvancedGeometry (wrong input)",
+      "setup": "javac src/lab1/AdvancedGeometry.java",
+      "run": "timeout 10s java -cp src lab1.AdvancedGeometry",
+      "input": "-1\n-2\n2\n-3\n-1\n3\n",
+      "output": "\n***\n***\n",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-A5 - AdvancedGeometry (empty rectangle)",
+      "setup": "javac src/lab1/AdvancedGeometry.java",
+      "run": "timeout 10s java -cp src lab1.AdvancedGeometry",
+      "input": "0\n2\n",
+      "output": "^[^\\*]*$",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-A6 - AdvancedGeometry (empty rectangle)",
+      "setup": "javac src/lab1/AdvancedGeometry.java",
+      "run": "timeout 10s java -cp src lab1.AdvancedGeometry",
+      "input": "2\n0\n",
+      "output": "^[^\\*]*$",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-A7 - AdvancedGeometry (empty rectangle)",
+      "setup": "javac src/lab1/AdvancedGeometry.java",
+      "run": "timeout 10s java -cp src lab1.AdvancedGeometry",
+      "input": "0\n0\n",
+      "output": "^[^\\*]*$",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-A8 - Accumulate",
+      "setup": "javac src/lab1/Accumulate.java",
+      "run": "timeout 10s java -cp src lab1.Accumulate",
+      "input": "4\n2 1 4 8\n",
+      "output": "2 3 7 15",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-A9 - Accumulate",
+      "setup": "javac src/lab1/Accumulate.java",
+      "run": "timeout 10s java -cp src lab1.Accumulate",
+      "input": "6\n1 0 0 1 1 0\n",
+      "output": "1 1 1 2 3 3",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-A10 - Accumulate",
+      "setup": "javac src/lab1/Accumulate.java",
+      "run": "timeout 10s java -cp src lab1.Accumulate",
+      "input": "1\n10\n",
+      "output": "10",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-A11 - Accumulate",
+      "setup": "javac src/lab1/Accumulate.java",
+      "run": "timeout 10s java -cp src lab1.Accumulate",
+      "input": "0\n",
+      "output": "^[^0-9]*$",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-B1 - Connect4 column winning",
+      "setup": "javac src/lab1/Grid.java src/lab1/Connect4.java",
+      "run": "timeout 10s java -cp src lab1.Connect4",
+      "input": "1\n 2\n 1\n 2\n 1\n 2\n 1\n",
+      "output": "winner Player 1",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-B2 - Connect4 row winning",
+      "setup": "javac src/lab1/Grid.java src/lab1/Connect4.java",
+      "run": "timeout 10s java -cp src lab1.Connect4",
+      "input": "1\n 1\n 2\n 2\n 3\n 3\n 4\n",
+      "output": "winner Player 1",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-B3 - Connect4 row winning (player 2)",
+      "setup": "javac src/lab1/Grid.java src/lab1/Connect4.java",
+      "run": "timeout 10s java -cp src lab1.Connect4",
+      "input": "1\n 1\n 2\n 2\n 3\n 3\n 3\n 4\n 5\n 4\n",
+      "output": "winner Player 2",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-B4 - Connect4 row winning, plus check column overflow",
+      "setup": "javac src/lab1/Grid.java src/lab1/Connect4.java",
+      "run": "timeout 10s java -cp src lab1.Connect4",
+      "input": "1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 2\n 2\n 3\n 3\n 4\n",
+      "output": "winner Player 1",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-B5 - Connect4 row winning, plus check row overflow",
+      "setup": "javac src/lab1/Grid.java src/lab1/Connect4.java",
+      "run": "timeout 10s java -cp src lab1.Connect4",
+      "input": "0\n 8\n 1\n 1\n 2\n 2\n 3\n 3\n 4\n",
+      "output": "winner Player 1",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-B6 - Connect4 row winning, plus check row overflow",
+      "setup": "javac src/lab1/Grid.java src/lab1/Connect4.java",
+      "run": "timeout 10s java -cp src lab1.Connect4",
+      "input": "0\n 8\n 7\n 1\n 6\n 2\n 5\n 3\n 3\n 4\n",
+      "output": "winner Player 2",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-B7 - Connect4 ascending diagonal winning",
+      "setup": "javac src/lab1/Grid.java src/lab1/Connect4.java",
+      "run": "timeout 10s java -cp src lab1.Connect4",
+      "input": "1\n 2\n 2\n 3\n 3\n 4\n 3\n 4\n 4\n 6\n 4\n",
+      "output": "winner Player 1",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-B8 - Connect4 second row winning",
+      "setup": "javac src/lab1/Grid.java src/lab1/Connect4.java",
+      "run": "timeout 10s java -cp src lab1.Connect4",
+      "input": "1\n 2\n 2\n 3\n 3\n 3\n 4\n 2\n 4\n 4\n 1\n",
+      "output": "winner Player 1",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-B9 - Connect4 ascending shifted diagonal winning",
+      "setup": "javac src/lab1/Grid.java src/lab1/Connect4.java",
+      "run": "timeout 10s java -cp src lab1.Connect4",
+      "input": "1\n 2\n 2\n 3\n 3\n 3\n 2\n 4\n 5\n 1\n 3\n 4\n 4\n 4\n 4\n 5\n 5\n 5\n 5\n 1\n 5\n",
+      "output": "winner Player 1",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-B10 - Connect4 descending diagonal",
+      "setup": "javac src/lab1/Grid.java src/lab1/Connect4.java",
+      "run": "timeout 10s java -cp src lab1.Connect4",
+      "input": "3\n 3\n 3\n 3\n 2\n 2\n 2\n 2\n 4\n 5\n 4\n 7\n 7\n 6\n 6\n 5\n 7\n 4\n",
+      "output": "winner Player 2",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Test-B11 - Connect4 draw",
+      "setup": "javac src/lab1/Grid.java src/lab1/Connect4.java",
+      "run": "timeout 10s java -cp src lab1.Connect4",
+      "input": "1\n 1\n 1\n 1\n 1\n 1\n 3\n 3\n 3\n 3\n 3\n 3\n 5\n 5\n 5\n 5\n 5\n 5\n 6\n 6\n 6\n 6\n 6\n 6\n 7\n 4\n 4\n 4\n 4\n 4\n 4\n 7\n 7\n 7\n 7\n 7\n 2\n 2\n 2\n 2\n 2\n 2\n",
+      "output": "draw",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    }
+  ]
+}
