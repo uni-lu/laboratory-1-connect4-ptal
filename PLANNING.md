@@ -19,7 +19,7 @@
    B * B * B * B *
 
 3. Ask the user for the checker coordinate (from)
-     * W * W * W * W
+   * W * W * W * W
    * * * * * * * *
    * * * * * * * *
    * * * * * * * *
